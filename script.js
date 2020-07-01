@@ -242,7 +242,6 @@ function Model () { //начало Models
                     break;      //прерываем цикл
                 };
             };
-            
             if(objArray[i].hitPoints <= 0){ //при хп меньши или равном нулю удаяем обьект
                 explosionArray.push({explX : objArray[i].x, explY : objArray[i].y, animX : objSettings.explAnimX, animY : objSettings.explAnimY, player : false});  //пушим взрыв в массив
                 playerSettings.score += 100;    //+очки по уничтожению
