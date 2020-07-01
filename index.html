@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Astronoid-X</title>
+                <!-- вложенный css файл -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+                <!-- вложенный js файл -->
+    <script src="http://fe.it-academy.by/JQ/jquery.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+                <!-- скрипт инициализаци -->
+    <script>    
+
+        let container = document.createElement('div');
+            container.setAttribute('id', 'container');
+        document.body.append(container);
+
+        let gameView = new View();
+        let gameModel = new Model();
+        let gameController = new Controller();
+        gameView.init(container);
+        gameModel.init(gameView, container);
+        gameController.init(gameModel, container);
+
+    </script>
+    
+
+</body>
+</html>
